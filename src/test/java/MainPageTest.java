@@ -27,9 +27,6 @@ public class MainPageTest extends UseCaseBase {
         mainPage.navigateToMainPage();
     }
 
-
-
-
     @Test
     public void mainPageLoadTest() throws IOException {
         logger.info("Main page load test");
