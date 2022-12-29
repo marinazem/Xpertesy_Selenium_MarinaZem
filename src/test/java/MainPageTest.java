@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-//import static Pages.LoginPage.driver;
+//import static Pages.LoginPage.driver; test 4
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
