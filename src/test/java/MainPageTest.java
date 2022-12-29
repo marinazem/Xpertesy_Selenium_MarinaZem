@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-//import static Pages.LoginPage.driver; test 4
+//import static Pages.LoginPage.driver;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -65,22 +65,25 @@ public class MainPageTest extends UseCaseBase {
         mainPage.captureElement(mainPage.educationTabCapture(),"Education_img");
         assertTrue(isPresent);
     }
-
-
-
       @Test
       public void openFamilyPage() throws IOException {
-        logger.info("Family page load test");
-        FamilyPage familyPage = mainPage.openFamilyTab();
-        boolean isThere = familyPage.isPageTextVisible();
-        mainPage.takeScreenshot("FamilyPageTest");
-        mainPage.captureElement(mainPage.familyTabCapture(),"Family_img");
-        assertTrue(isThere);
+          logger.info("Family page load test");
+          FamilyPage familyPage = mainPage.openFamilyTab();
+          boolean isThere = familyPage.isPageTextVisible();
+          mainPage.takeScreenshot("FamilyPageTest");
+          mainPage.captureElement(mainPage.familyTabCapture(), "Family_img");
+          assertTrue(isThere);
+
+      }
+      @Test
+      public void openForOfficesPage() throws IOException {
+        logger.info("For Offices page load test");
+        ForOfficesPage forOfficesPage = mainPage.openForOfficesTab();
+        boolean isIt = forOfficesPage.isPageTextVisible();
+        mainPage.takeScreenshot("ForOfficesPageTest");
+        mainPage.captureElement(mainPage.forOfficesTabCapture(),"ForOffices_img");
+        assertTrue(isIt);
     }
-
-
-
-
 
 }
 
